@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.zwenex.ayoe.yangonshelf.Fragments.TradeFragment">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="true"
+
+            android:id="@+id/appbar_layout">
+
+            <android.support.v7.widget.Toolbar
+
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="yangon shelf"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            </android.support.v7.widget.Toolbar>
+            <LinearLayout
+                android:background="@drawable/button_tab_bg"
+                android:padding="0dp"
+                android:layout_margin="6dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:background="@drawable/button_bg_left"
+                    android:textColor="#ffffff"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_margin="0dp"
+                    android:id="@+id/incoming_btn"
+                    android:text="Incoming"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp" />
+                <Button
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:textSize="12sp"
+                    android:layout_margin="0dp"
+                    android:id="@+id/outgoing_btn"
+                    android:text="Outgoing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp" />
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

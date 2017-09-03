@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.design.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zwenex.ayoe.yangonshelf.SearchActivity">
+    <android.support.design.widget.AppBarLayout
+        android:elevation="0dp"
+
+        app:elevation="0dp"
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <org.cryse.widget.persistentsearch.PersistentSearchView
+                android:id="@+id/search_view2"
+                app:persistentSV_displayMode="toolbar"
+                app:persistentSV_homeButtonMode="arrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="4dp"
+                app:persistentSV_searchTextColor="#111111"
+                app:persistentSV_editTextColor="#222222"
+                app:persistentSV_editHintText="Search: Books, Authors, Genres"
+                app:persistentSV_editHintTextColor="#aaaaaa"
+                app:persistentSV_searchCardElevation="2dp"
+                app:persistentSV_customToolbarHeight="64dp"/>
+            <!--<com.miguelcatalan.materialsearchview.MaterialSearchView-->
+                <!--style="@style/MaterialSearchViewStyle"-->
+                <!--android:id="@+id/search_view2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v7.widget.RecyclerView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+</android.support.design.widget.CoordinatorLayout>
+    </layout>

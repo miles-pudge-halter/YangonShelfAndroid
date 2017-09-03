@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/trader_profile"
+            android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <ImageView
+            android:id="@+id/trade_status"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_complete"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/trader_profile"
+            android:layout_toStartOf="@id/trade_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#000000"
+                android:layout_marginStart="10dp"
+                android:id="@+id/trade_body"
+                android:text="Someone requested some books from you. asdfjkasldfj asdf asf as fasd asdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/trade_timestamp"
+                android:layout_alignStart="@id/trade_body"
+                android:text="1st July 1999"
+                android:layout_below="@id/trade_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

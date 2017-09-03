@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/co_od_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.zwenex.ayoe.yangonshelf.Trade.TradeFragment2">
+
+        <RelativeLayout
+            android:paddingEnd="8dp"
+            android:padding="3dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:elevation="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginStart="5dp"
+                android:text="0 books selected"
+                android:layout_centerVertical="true"
+                android:id="@+id/book_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:id="@+id/trader2_profile_pic"
+                android:src="@drawable/com_facebook_profile_picture_blank_square"
+                android:scaleType="centerCrop"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+            <TextView
+                android:layout_marginRight="3dp"
+                android:layout_toStartOf="@id/trader2_profile_pic"
+                android:layout_centerVertical="true"
+                android:id="@+id/trader2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ko Ba Toke" />
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:id="@+id/trade_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/shadow_bg"/>
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/trade_back_btn"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_chevron_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="BACK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_gravity="center_vertical|right"
+                android:id="@+id/trade_offer_btn"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:text="OFFER TRADE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_chevron_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
+

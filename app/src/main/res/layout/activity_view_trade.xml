@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/other_profile"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/com_facebook_profile_picture_blank_square" />
+
+                    <TextView
+                        android:id="@+id/other_give"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Other give"
+                        android:textColor="#444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/receiving_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/your_profile"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/com_facebook_profile_picture_blank_square" />
+
+                    <TextView
+                        android:id="@+id/you_give"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="5dp"
+                        android:text="You give"
+                        android:textColor="#444444"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/giving_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginBottom="75dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+                        <ImageView
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/prefix_icon"
+                            android:layout_alignParentStart="true"
+                            app:srcCompat="@drawable/ic_trade_status"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/prefix_icon"
+                            android:drawablePadding="5dp"
+                            android:id="@+id/status_prefix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Trade status: " />
+
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/trade_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/status_prefix"
+                            android:layout_toEndOf="@id/status_prefix"
+                            android:background="@drawable/status_confirmed_bg"
+                            android:text="Accepted"
+                            android:textColor="@android:color/white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="visible"
+                        android:id="@+id/trade_contact_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+                        <RelativeLayout
+                            android:id="@+id/ph_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/phone_icon"
+                                app:srcCompat="@drawable/ic_phone"
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/phone_icon"
+                                android:drawablePadding="5dp"
+                                android:text="Contact :"
+                                android:id="@+id/trade_contact_prefix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:id="@+id/trade_contact"
+                                android:background="?attr/selectableItemBackground"
+                                android:textColor="#4285F4"
+                                android:text="123123123"
+                                android:layout_toEndOf="@id/trade_contact_prefix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                        <TextView
+                            android:layout_below="@id/ph_layout"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:visibility="visible"
+                            android:text="Both you and the other have accepted to trade. Click confirm when you have physically received the books you asked for."
+                            android:id="@+id/accepted_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <FrameLayout
+            android:background="#ffffff"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/confirm_cancel_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/trade_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="Confirm" />
+
+                <Button
+                    android:id="@+id/trade_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="Cancel" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/accept_deny_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/trade_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="Accept" />
+
+                <Button
+                    android:id="@+id/trade_deny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="Deny" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

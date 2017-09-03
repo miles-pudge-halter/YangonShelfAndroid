@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/rel_layout"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            app:elevation="8dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="#111111"
+                android:textSize="18sp"
+                android:text="Choose your choice of font."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioGroup
+                android:layout_margin="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/radio_zawgyi"
+                    android:text="Zawgyi (ဤစာကိုျမင္ရပါသည္)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:textSize="16sp"
+                    android:id="@+id/radio_unicode"
+                    android:text="Unicode (ဤစာကိုမြင်ရပါသည်)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.design.widget.FloatingActionButton
+            app:backgroundTint="#FF4081"
+            app:layout_anchor="@id/card"
+            app:layout_anchorGravity="bottom|center"
+            android:id="@+id/submit_btn"
+            app:srcCompat="@drawable/ic_arrow_right"
+            android:tint="#ffffff"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
